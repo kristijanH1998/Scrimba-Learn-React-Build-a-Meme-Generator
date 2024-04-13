@@ -84,3 +84,77 @@ export default App
 //       </div>
 //   )
 // }
+
+//Challenge: flipping state back and forth
+// export default function App() {
+//   const [isGoingOut, setIsGoingOut] = React.useState(true)
+//   function changeMind() {
+//       setIsGoingOut(prevState => !prevState)
+//   }
+  
+//   return (
+//       <div className="state">
+//           <h1 className="state--title">Do I feel like going out tonight?</h1>
+//           <div onClick={changeMind} className="state--value">
+//               <h1>{isGoingOut ? "Yes" : "No"}</h1>
+//           </div>
+//       </div>
+//   )
+// }
+
+//Complex state: arrays
+// export default function App() {
+//   const [thingsArray, setThingsArray] = React.useState(["Thing 1", "Thing 2"])
+  
+//   function addItem() {
+//       setThingsArray(prevState => {
+//           return [...prevState, `Thing ${prevState.length + 1}`]
+//       })
+//   }
+  
+//   const thingsElements = thingsArray.map(thing => <p key={thing}>{thing}</p>)
+  
+//   return (
+//       <div>
+//           <button onClick={addItem}>Add Item</button>
+//           {thingsElements}
+//       </div>
+//   )
+// }
+
+//Updating State Objects:
+// import Star from "./Star"
+
+// export default function App() {
+//   const [contact, setContact] = React.useState({
+//       firstName: "John",
+//       lastName: "Doe",
+//       phone: "+1 (719) 555-1212",
+//       email: "itsmyrealname@example.com",
+//       isFavorite: true
+//   })
+  
+//   function toggleFavorite() {
+//       setContact(prevContact => ({
+//           ...prevContact,
+//           isFavorite: !prevContact.isFavorite
+//       }))
+//   }
+  
+//   return (
+//       <main>
+//           <article className="card">
+//               <img src="./images/user.png" className="card--image" />
+//               <div className="card--info">
+//                   <Star isFilled={contact.isFavorite} handleClick={toggleFavorite} />
+//                   <h2 className="card--name">
+//                       {contact.firstName} {contact.lastName}
+//                   </h2>
+//                   <p className="card--contact">{contact.phone}</p>
+//                   <p className="card--contact">{contact.email}</p>
+//               </div>
+              
+//           </article>
+//       </main>
+//   )
+// }
