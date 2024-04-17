@@ -328,8 +328,37 @@ main {
   cursor: pointer;
 }
 
+.card--favorite-button {
+  border: none;
+  background: transparent;
+}
+
+.card--favorite-button:active {
+  transform: none;
+  box-shadow: none;
+}
+
 .card--contact {
   font-size: 0.75rem;
   color: gray;
   margin-block: 7px;
 } */
+
+/* Boxes challenge styles:
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.box:active {
+    transform: none;
+}
+*/
