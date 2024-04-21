@@ -269,3 +269,48 @@ export default App
 //         </div>
 //     )
 // }
+
+//Star Wars API example with useEffect:
+// import React from "react"
+
+// export default function App() {
+//     const [starWarsData, setStarWarsData] = React.useState({})
+//     const [count, setCount] = React.useState(1)
+  
+//     React.useEffect(function() {
+//         console.log("Effect ran")
+//         fetch(`https://swapi.dev/api/people/${count}`)
+//             .then(res => res.json())
+//             .then(data => setStarWarsData(data))
+//     }, [count])
+    
+//     return (
+//         <div>
+//             <h2>The count is {count}</h2>
+//             <button onClick={() => setCount(prevCount => prevCount + 1)}>Get Next Character</button>
+//             <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
+//         </div>
+//     )
+// }
+
+//Window Tracker example:
+// import React from "react"
+// import WindowTracker from "./WindowTracker"
+
+// export default function App() {
+    
+//     const [show, setShow] = React.useState(true)
+    
+//     function toggle() {
+//         setShow(prevShow => !prevShow)
+//     }
+    
+//     return (
+//         <div className="container">
+//             <button onClick={toggle}>
+//                 Toggle WindowTracker
+//             </button>
+//             {show && <WindowTracker />}
+//         </div>
+//     )
+// }
